@@ -13,14 +13,23 @@
                 <input type="text" class="form-control col-4" id="userInput" />
                 <label for="messageInput">Message</label>
                 <input type="text" class="form-control col-6" id="messageInput" />
-                <input type="button" id="sendButton" class="btn badge-info" value="Send Message" />
+                <input type="button" id="sendButton" class="btn btn-info" value="Send Message" />
+
+                <button type="button" class="btn btn-primary" id="toggleMessages">
+                    Toggle Messages<span class="badge badge-light">0</span>
+                    <span class="sr-only">unread messages</span>
+                </button>
             </div>
         </div>
 
         <div class="row">
             <div class="col-6">
-                <ul id="messagesList" class="list-group list-group-flush"></ul>
+                <ul id="messagesList" class="list-group"></ul>
             </div>
+        </div>
+
+        <div class="row">
+            <a href="Streaming.html">Streaming.html</a>
         </div>
     </div>
 

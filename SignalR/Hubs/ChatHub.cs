@@ -12,5 +12,15 @@ namespace SignalR.Hubs
         {
             await Clients.All.SendAsync("ReceiveMessage", user, message);
         }
+
+        public override async Task OnConnectedAsync()
+        {
+            await Clients.All.SendAsync("ReceiveSystem", "[new client connected]");
+        }
+
+        public override async Task OnDisconnectedAsync(Exception exception)
+        {
+            await Clients.Others.SendAsync("ReceiveSystem", "[client disconnected]");
+        }
     }
 }

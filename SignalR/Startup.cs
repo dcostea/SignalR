@@ -30,9 +30,14 @@ namespace SignalR
             app.UseSignalR(routes =>
             {
                 routes.MapHub<ChatHub>("/chatHub");
+                routes.MapHub<StreamingHub>("/streamingHub");
             });
 
-            app.UseStaticFiles();
+            //app.UseDefaultFiles();
+            //app.UseStaticFiles();
+
+            app.UseFileServer();
+
         }
     }
 }
