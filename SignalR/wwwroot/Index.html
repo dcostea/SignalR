@@ -1,0 +1,32 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <link href="lib/bootstrap/css/bootstrap.min.css" rel="stylesheet" />
+</head>
+<body>
+    <div class="container">
+        <div class="row">
+            <div class="form-group col-6">
+                <label for="userInput">User</label>
+                <input type="text" class="form-control col-4" id="userInput" />
+                <label for="messageInput">Message</label>
+                <input type="text" class="form-control col-6" id="messageInput" />
+                <input type="button" id="sendButton" class="btn badge-info" value="Send Message" />
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-6">
+                <ul id="messagesList" class="list-group list-group-flush"></ul>
+            </div>
+        </div>
+    </div>
+
+    <script src="lib/jquery/jquery.min.js"></script>
+    <script src="lib/bootstrap/js/bootstrap.min.js"></script>
+    <script src="lib/signalr/dist/browser/signalr.js"></script>
+    <script src="js/chat.js"></script>
+</body>
+</html>
