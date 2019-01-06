@@ -1,6 +1,6 @@
 ﻿"use strict";
 
-var connection = new signalR.HubConnectionBuilder().withUrl("/streamingHub").build();
+var connection = new signalR.HubConnectionBuilder().withUrl("/streaming").build();
 
 connection.start().catch(function (err) {
     return console.error(err.toString());
